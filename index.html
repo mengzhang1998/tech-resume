@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张梦祥 - 金融科技简历（亮色版）</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 基础重置与变量 - 亮色主题 */
+        :root {
+            --bg-light: #f8fafc;
+            --bg-card: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --accent-electric: #00a6ff;
+            --accent-blue: #0088cc;
+            --border-color: #e2e8f0;
+            --shadow-color: rgba(0, 166, 255, 0.15);
+            --transition-speed: 0.3s;
+            --gradient-primary: linear-gradient(90deg, var(--accent-blue), var(--accent-electric));
+            --gradient-light: linear-gradient(145deg, rgba(0, 136, 204, 0.08), rgba(0, 166, 255, 0.04));
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(0, 166, 255, 0.03) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(0, 136, 204, 0.03) 0%, transparent 20%);
+            background-attachment: fixed;
+        }
+
+        /* 照片样式 */
+        .photo-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        .photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--bg-card);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            background-color: #f0f8ff;
+            transition: all var(--transition-speed);
+        }
+
+        .photo:hover {
+            transform: scale(1.03);
+            box-shadow: 0 12px 30px rgba(0, 166, 255, 0.2);
+        }
+
+        /* 头部样式 */
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+            margin-bottom: 40px;
+            background: var(--bg-card);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 3px;
+            background: var(--gradient-primary);
+            border-radius: 3px;
+        }
+
+        .name {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 0.5px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .name::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 10%;
+            width: 80%;
+            height: 2px;
+            background: var(--gradient-primary);
+            opacity: 0.3;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-secondary);
+            transition: all var(--transition-speed);
+            padding: 10px 18px;
+            background: rgba(0, 166, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(0, 166, 255, 0.1);
+        }
+
+        .contact-item:hover {
+            color: var(--accent-electric);
+            transform: translateY(-2px);
+            background: rgba(0, 166, 255, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 166, 255, 0.1);
+        }
+
+        .contact-item i {
+            font-size: 1.3rem;
+            color: var(--accent-blue);
+        }
+
+        /* 卡片样式 */
+        .section {
+            background-color: var(--bg-card);
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 35px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+            transition: all var(--transition-speed);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--gradient-primary);
+            opacity: 0;
+            transition: opacity var(--transition-speed);
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 32px rgba(0, 166, 255, 0.12);
+        }
+
+        .section:hover::before {
+            opacity: 1;
+        }
+
+        .section-title {
+            font-size: 1.9rem;
+            margin-bottom: 28px;
+            padding-bottom: 18px;
+            border-bottom: 2px solid var(--border-color);
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: var(--text-primary);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 90px;
+            height: 3px;
+            background: var(--gradient-primary);
+            border-radius: 3px;
+        }
+
+        .section-title i {
+            color: var(--accent-blue);
+            background: rgba(0, 166, 255, 0.1);
+            padding: 12px;
+            border-radius: 12px;
+        }
+
+        /* 内容样式 */
+        .education-item, .job-item {
+            margin-bottom: 35px;
+            padding: 25px;
+            background: rgba(0, 166, 255, 0.02);
+            border-radius: 12px;
+            border: 1px solid rgba(0, 166, 255, 0.08);
+            transition: all var(--transition-speed);
+        }
+
+        .education-item:hover, .job-item:hover {
+            background: rgba(0, 166, 255, 0.05);
+            border-color: rgba(0, 166, 255, 0.15);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+        }
+
+        .item-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--accent-blue);
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .item-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: rgba(0, 166, 255, 0.3);
+        }
+
+        .item-date {
+            color: var(--accent-electric);
+            font-weight: 600;
+            background: var(--gradient-light);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            border: 1px solid rgba(0, 166, 255, 0.2);
+        }
+
+        .item-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 18px;
+            font-weight: 500;
+            padding-left: 10px;
+            border-left: 3px solid var(--accent-blue);
+        }
+
+        .item-list {
+            padding-left: 25px;
+        }
+
+        .item-list li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 10px;
+        }
+
+        .item-list li::before {
+            content: '▸';
+            color: var(--accent-electric);
+            position: absolute;
+            left: -20px;
+            font-weight: bold;
+        }
+
+        .highlight {
+            color: var(--accent-blue);
+            font-weight: 600;
+            background: rgba(0, 166, 255, 0.08);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* 项目卡片 */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .project-card {
+            background: var(--gradient-light);
+            border: 1px solid rgba(0, 166, 255, 0.15);
+            border-radius: 14px;
+            padding: 25px;
+            transition: all var(--transition-speed);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gradient-primary);
+        }
+
+        .project-card:hover {
+            border-color: var(--accent-electric);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 166, 255, 0.15);
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            color: var(--accent-blue);
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .project-tag {
+            background: var(--gradient-primary);
+            color: white;
+            font-size: 0.85rem;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        /* 技能标签 */
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .skill-tag {
+            background: var(--gradient-light);
+            color: var(--accent-blue);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1rem;
+            border: 1px solid rgba(0, 166, 255, 0.2);
+            transition: all var(--transition-speed);
+            font-weight: 500;
+        }
+
+        .skill-tag:hover {
+            background: var(--gradient-primary);
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 166, 255, 0.2);
+        }
+
+        /* 表格样式 */
+        .awards-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .awards-table th, .awards-table td {
+            padding: 18px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .awards-table th {
+            color: var(--accent-blue);
+            font-weight: 600;
+            background: rgba(0, 166, 255, 0.05);
+        }
+
+        .awards-table tr {
+            transition: background-color var(--transition-speed);
+        }
+
+        .awards-table tr:hover {
+            background-color: rgba(0, 166, 255, 0.03);
+        }
+
+        /* 核心优势 */
+        .strengths-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .strength-card {
+            background: var(--gradient-light);
+            border: 1px solid rgba(0, 166, 255, 0.15);
+            border-radius: 14px;
+            padding: 25px;
+            transition: all var(--transition-speed);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .strength-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--gradient-primary);
+            opacity: 0;
+            transition: opacity var(--transition-speed);
+        }
+
+        .strength-card:hover {
+            border-color: var(--accent-electric);
+            transform: translateY(-5px);
+        }
+
+        .strength-card:hover::before {
+            opacity: 1;
+        }
+
+        .strength-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--accent-electric);
+            margin-bottom: 15px;
+            opacity: 0.8;
+            text-shadow: 0 2px 4px rgba(0, 166, 255, 0.2);
+        }
+
+        /* 职业目标 */
+        .goal-box {
+            background: var(--gradient-light);
+            border: 1px solid rgba(0, 166, 255, 0.2);
+            border-radius: 14px;
+            padding: 30px;
+            margin-top: 25px;
+            text-align: center;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .goal-box::before {
+            content: '🎯';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            opacity: 0.1;
+        }
+
+        /* 页脚 */
+        .footer {
+            text-align: center;
+            padding: 35px 0;
+            margin-top: 50px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            background: rgba(0, 166, 255, 0.02);
+            border-radius: 16px;
+        }
+
+        .update-date {
+            color: var(--accent-blue);
+            font-weight: 600;
+            background: rgba(0, 166, 255, 0.1);
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        /* 主题切换按钮 */
+        .theme-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+
+        .theme-btn {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(0, 166, 255, 0.3);
+            transition: all var(--transition-speed);
+        }
+
+        .theme-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 166, 255, 0.4);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .name {
+                font-size: 2.4rem;
+            }
+
+            .title {
+                font-size: 1.3rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+
+            .contact-item {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .section {
+                padding: 25px;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .item-header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .project-grid, .strengths-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .awards-table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            .theme-switch {
+                position: static;
+                margin: 20px auto;
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 15px;
+            }
+
+            .name {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+
+            .item-title {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 主题切换按钮 -->
+    <div class="theme-switch">
+        <button class="theme-btn" onclick="window.open('index.html', '_self')">
+            <i class="fas fa-moon"></i>
+            切换到深色主题
+        </button>
+    </div>
+
+    <!-- 头部信息 -->
+    <header class="header">
+        <div class="photo-container">
+            <img src="photo.jpg" alt="张梦祥照片" class="photo">
+        </div>
+        <h1 class="name">张梦祥</h1>
+        <p class="title">咨询顾问 | 数据分析 | 行业研究</p>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-mobile-alt"></i>
+                <span>15357302237</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>1412666080@qq.com</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>安徽省安庆市</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-birthday-cake"></i>
+                <span>1999年7月</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 教育背景 -->
+    <section class="section">
+        <h2 class="section-title"><i class="fas fa-graduation-cap"></i> 教育背景</h2>
+
+        <div class="education-item">
+            <div class="item-header">
+                <h3 class="item-title">哈尔滨商业大学 · 金融学学术硕士</h3>
+                <span class="item-date">2022.09 - 2025.07</span>
+            </div>
+            <ul class="item-list">
+                <li><span class="highlight">主修课程</span>：中级宏微观经济学、金融计量经济学、财务报表分析、投资学、金融风险管理</li>
+                <li><span class="highlight">学术成果</span>：专注机器学习在金融领域的应用，发表SSCI论文1篇</li>
+                <li><span class="highlight">荣誉</span>：研究生入学奖学金、学业奖学金</li>
+            </ul>
+        </div>
+
+        <div class="education-item">
+            <div class="item-header">
+                <h3 class="item-title">安徽财经大学 · 金融工程本科</h3>
+                <span class="item-date">2018.09 - 2022.06</span>
+            </div>
+            <ul class="item-list">
+                <li><span class="highlight">主修课程</span>：金融工程、Python程序设计、量化投资、金融MATLAB、大数据分析</li>
+                <li><span class="highlight">竞赛获奖</span>：安徽财经大学Python程序设计大赛二等奖、全国软件人才大赛校园赛三等奖</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 工作经历 -->
+    <section class="section">
+        <h2 class="section-title"><i class="fas fa-briefcase"></i> 工作经历</h2>
+
+        <div class="job-item">
+            <div class="item-header">
+                <h3 class="item-title">上海念桐咨询有限公司 · 咨询顾问</h3>
+                <span class="item-date">2025.07 - 至今 · 浙江</span>
+            </div>
+
+            <h4 class="item-subtitle">核心项目与成果</h4>
+
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-title">
+                        <span>战略咨询</span>
+                        <span class="project-tag">3家省属国企</span>
+                    </div>
+                    <ul class="item-list">
+                        <li>运用Python数据分析支持"十五五"战略规划</li>
+                        <li><span class="highlight">量化成果</span>：预计提升资产回报率2-3%</li>
+                        <li>完成战略实施方案编制</li>
+                    </ul>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">
+                        <span>资产重组</span>
+                        <span class="project-tag">2个大型项目</span>
+                    </div>
+                    <ul class="item-list">
+                        <li>设计资产优化方案，利用财务模型分析交易结构</li>
+                        <li><span class="highlight">量化成果</span>：预计释放存量资产价值超5亿元</li>
+                        <li>支持交易谈判与实施方案制定</li>
+                    </ul>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">
+                        <span>组织变革</span>
+                        <span class="project-tag">主导1家国企</span>
+                    </div>
+                    <ul class="item-list">
+                        <li>设计绩效指标体系，评估现行薪酬体系</li>
+                        <li><span class="highlight">量化成果</span>：预计提升员工满意度15%</li>
+                        <li>编制全套改革方案与配套制度</li>
+                    </ul>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">
+                        <span>IPO筹备</span>
+                        <span class="project-tag">2家拟上市企业</span>
+                    </div>
+                    <ul class="item-list">
+                        <li>协助设计内部控制框架，确保符合上市合规要求</li>
+                        <li><span class="highlight">项目贡献</span>：编制内控手册</li>
+                        <li>提供财务合规咨询支持</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h4 class="item-subtitle" style="margin-top: 25px;">技术应用与贡献</h4>
+            <ul class="item-list">
+                <li><span class="highlight">数据分析</span>：运用Python、Pandas完成8个项目的财务建模，提升交付效率</li>
+                <li><span class="highlight">报告撰写</span>：协助团队完成项目报告，获得客户高度认可</li>
+                <li><span class="highlight">技能整合</span>：将金融专业知识与数据分析能力结合，提供数据驱动的决策支持</li>
+            </ul>
+        </div>
+
+        <div class="job-item">
+            <div class="item-header">
+                <h3 class="item-title">容诚会计师事务所（北京） · 审计助理实习</h3>
+                <span class="item-date">2023.12 - 2024.03</span>
+            </div>
+            <ul class="item-list">
+                <li><span class="highlight">审计项目</span>：参与1家上市公司+1家大型国企年度财务审计</li>
+                <li><span class="highlight">核心职责</span>：底稿编制、资产盘点、函证维护、报表审查</li>
+                <li><span class="highlight">项目经验</span>：完整参与审计全流程，独立完成任务，遵守职业规范</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 专业技能 -->
+    <section class="section">
+        <h2 class="section-title"><i class="fas fa-tools"></i> 专业技能</h2>
+
+        <h4 class="item-subtitle">技术栈</h4>
+        <div class="skill-tags">
+            <span class="skill-tag">Python (Pandas, NumPy, Scikit-learn, Jieba)</span>
+            <span class="skill-tag">MATLAB</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">数据清洗与建模</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">Excel高级函数</span>
+            <span class="skill-tag">PPT报告制作</span>
+            <span class="skill-tag">LDA主题模型</span>
+            <span class="skill-tag">财务建模</span>
+            <span class="skill-tag">行业研究</span>
+            <span class="skill-tag">战略规划</span>
+            <span class="skill-tag">绩效体系设计</span>
+            <span class="skill-tag">内部控制</span>
+        </div>
+
+        <h4 class="item-subtitle" style="margin-top: 25px;">证书与语言</h4>
+        <ul class="item-list">
+            <li><span class="highlight">专业证书</span>：证券从业资格证</li>
+            <li><span class="highlight">语言能力</span>：英语六级（CET-6），可进行专业阅读与书面沟通</li>
+            <li><span class="highlight">计算机</span>：全国计算机二级</li>
+        </ul>
+    </section>
+
+    <!-- 学术研究 -->
+    <section class="section">
+        <h2 class="section-title"><i class="fas fa-flask"></i> 学术研究</h2>
+
+        <div class="project-card" style="margin-bottom: 20px;">
+            <h4 class="item-subtitle">SSCI论文发表</h4>
+            <p><strong>Wu, J., & MengXiang, Z. (2024). Corporate innovation and performance: a textual measure based on securities analysts' research reports. <em>Technology Analysis & Strategic Management</em>, 1–15.</strong></p>
+            <p><a href="https://doi.org/10.1080/09537325.2024.2417406" style="color: var(--accent-blue); text-decoration: none; border-bottom: 2px dashed var(--accent-electric); font-weight: 500;">https://doi.org/10.1080/09537325.2024.2417406</a></p>
+        </div>
+
+        <h4 class="item-subtitle">研究方法与技术创新</h4>
+        <ul class="item-list">
+            <li><span class="highlight">数据获取</span>：使用Python爬虫获取60万份分析师研究报告</li>
+            <li><span class="highlight">数据处理</span>：MongoDB存储 + Pandas清洗 + Jieba分词</li>
+            <li><span class="highlight">模型构建</span>：LDA主题模型构建企业创新评价指标</li>
+            <li><span class="highlight">实证验证</span>：通过统计分析验证指标有效性，为投资决策提供参考</li>
+        </ul>
+    </section>
+
+    <!-- 荣誉奖项 -->
+    <section class="section">
+        <h2 class="section-title"><i class="fas fa-award"></i> 荣誉奖项</h2>
+
+        <table class="awards-table">
+            <thead>
+                <tr>
+                    <th>年份</th>
+                    <th>奖项</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024</td>
+                    <td>哈尔滨商业大学学业奖学金</td>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>哈尔滨商业大学研究生入学奖学金</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>全国软件和信息技术专业人才大赛校园赛三等奖</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>安徽财经大学Python程序设计大赛二等奖</td>
+                </tr>
+                <tr>
+                    <td>2020</td>
+                    <td>安徽省大学生企业管理技能大赛校园赛三等奖</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 核心优势 -->
+    <section class="section">
+        <h2 class="section-title"><i class="fas fa-star"></i> 核心优势</h2>
+
+        <div class="strengths-grid">
+            <div class="strength-card">
+                <div class="strength-number">01</div>
+                <h4 class="item-subtitle">技术+金融复合背景</h4>
+                <ul class="item-list">
+                    <li>扎实的金融理论基础 + 熟练的Python数据分析能力</li>
+                    <li>能够将机器学习算法应用于实际金融问题解决</li>
+                </ul>
+            </div>
+
+            <div class="strength-card">
+                <div class="strength-number">02</div>
+                <h4 class="item-subtitle">项目交付能力</h4>
+                <ul class="item-list">
+                    <li>累计参与8个咨询项目，独立负责数据分析模块</li>
+                    <li>提升项目交付效率20%，获得客户高度认可</li>
+                </ul>
+            </div>
+
+            <div class="strength-card">
+                <div class="strength-number">03</div>
+                <h4 class="item-subtitle">研究与创新能力</h4>
+                <ul class="item-list">
+                    <li>SSCI论文作者，掌握文本分析、主题建模等前沿方法</li>
+                    <li>能够将学术研究成果转化为实际业务解决方案</li>
+                </ul>
+            </div>
+
+            <div class="strength-card">
+                <div class="strength-number">04</div>
+                <h4 class="item-subtitle">沟通与协作</h4>
+                <ul class="item-list">
+                    <li>擅长团队协作，能够与不同背景的同事有效沟通</li>
+                    <li>具备优秀的报告撰写和客户沟通能力</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 职业目标 -->
+    <section class="section">
+        <h2 class="section-title"><i class="fas fa-bullseye"></i> 职业目标</h2>
+
+        <div class="goal-box">
+            寻求金融咨询、数据分析或量化研究相关职位，期望在快速发展的金融科技领域发挥技术+金融的复合优势，通过数据驱动的方法为客户创造价值。
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>简历最后更新：<span class="update-date">2026年3月</span> · 亮色科技主题优化版</p>
+        <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">科技蓝主题 | 响应式设计 | 支持深色/亮色切换</p>
+    </footer>
+
+    <script>
+        // 简单的交互效果
+        document.addEventListener('DOMContentLoaded', function() {
+            // 为技能标签添加点击效果
+            const skillTags = document.querySelectorAll('.skill-tag');
+            skillTags.forEach(tag => {
+                tag.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                });
+            });
+
+            // 为项目卡片添加点击效果
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.style.boxShadow = '0 0 20px rgba(0, 166, 255, 0.3)';
+                    setTimeout(() => {
+                        this.style.boxShadow = '';
+                    }, 300);
+                });
+            });
+
+            // 平滑滚动到锚点
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 20,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // 打印优化
+            window.addEventListener('beforeprint', function() {
+                document.querySelector('.theme-switch').style.display = 'none';
+            });
+
+            window.addEventListener('afterprint', function() {
+                document.querySelector('.theme-switch').style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
